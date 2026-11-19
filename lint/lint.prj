@@ -1,0 +1,32 @@
+#!SPYGLASS_PROJECT_FILE
+#!VERSION 3.0
+#  -------------------------------------------------------------------
+#  This is a software generated project file. Manual edits to this file could be lost during the next save operation
+#  Copyright Synopsys Inc.
+#  Last Updated By: SpyGlass SpyGlass_vL-2016.06
+#  Last Updated On Thu Nov 19 05:52:44 2026
+#
+#  -------------------------------------------------------------------
+
+##Data Import Section
+
+read_file -type verilog ../RTL/Bit_Counter_SPI.v
+read_file -type verilog ../RTL/RX_Shift_REG.v
+read_file -type verilog ../RTL/SPI_Clock_Generator.v
+read_file -type verilog ../RTL/SPI_Master_FSM.v
+read_file -type verilog ../RTL/Top_SPI_Master.v
+read_file -type verilog ../RTL/TX_Shift_REG.v
+
+##Common Options Section
+
+set_option projectwdir .
+set_option language_mode mixed
+set_option designread_enable_synthesis no
+set_option designread_disable_flatten no
+set_option active_methodology $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff
+
+
+##Goal Setup Section
+
+current_methodology $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff
+
